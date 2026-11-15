@@ -6,7 +6,6 @@
 .hero{
   padding-top:88px; padding-bottom:96px;
   padding-left:40px; padding-right:40px;
-  display:block;
   border-radius:14px;
   background-image:
     linear-gradient(90deg, var(--paper) 0%, var(--paper) 10%, rgba(251,250,247,.10) 100%, rgba(251,250,247,.10) 100%),
@@ -28,8 +27,7 @@
   font-size:18px; color:var(--ink-soft); margin-bottom:10px; max-width:480px;
 }
 .hero .affil{
-  font-family:var(--mono); font-size:13px; color:var(--black); margin-bottom:28px;
-
+  font-family:var(--mono); font-size:13px; color:var(--ink); margin-bottom:28px;
 }
 .hero-cta{ display:flex; gap:14px; flex-wrap:wrap; }
 
@@ -62,7 +60,6 @@
 
 /* ---------- research ---------- */
 .research-grid{
-  padding:0 32px;
   display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
   background:var(--line); border:1px solid var(--line);
 }
@@ -179,7 +176,7 @@
     padding-left:24px; padding-right:24px;
     background-image:
       linear-gradient(180deg, var(--paper) 0%, var(--paper) 60%, rgba(251,250,247,.75) 85%, rgba(251,250,247,.6) 100%),
-      url('../images/hero-bg.jpg');
+      url('../legend.png');
   }
   .about-grid{ grid-template-columns:1fr; gap:32px; }
   .research-grid{ grid-template-columns:1fr; }
@@ -191,7 +188,7 @@
 
 /* ===== Blog thumbnails ===== */
 a.blog-item { color: inherit; text-decoration: none; }
-.blog-item.has-thumb { grid-template-columns: 120px 1fr 200px; align-items: center; }
+.blog-item.has-thumb { grid-template-columns: 120px 1fr 160px; align-items: center; }
 .blog-thumb {
   width: 200px; aspect-ratio: 16 / 10; object-fit: cover;
   border-radius: 8px; border: 1px solid rgba(0,0,0,.08);
@@ -199,10 +196,6 @@ a.blog-item { color: inherit; text-decoration: none; }
 }
 a.blog-item:hover .blog-thumb { transform: scale(1.03); }
 a.blog-item:hover h4 { text-decoration: underline; }
-@media (max-width: 720px) {
-  .blog-item.has-thumb { grid-template-columns: 1fr; }
-  .blog-thumb { width: 100%; order: -1; }
-}
 
 
 /* Blog section refinements */
@@ -239,3 +232,9 @@ a.blog-item:hover h4 { text-decoration: underline; }
   border-radius: 6px;
 }
 
+/* 手机端缩略图：放在最后，覆盖上面 #blog 的固定尺寸 */
+@media (max-width: 720px) {
+  .blog-item.has-thumb { grid-template-columns: 1fr; }
+  .blog-thumb,
+  #blog .blog-thumb { width: 100%; height: auto; order: -1; }
+}
