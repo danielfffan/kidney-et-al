@@ -10,7 +10,8 @@ header{
   border-bottom:1px solid var(--line);
 }
 nav{
-  max-width:1080px; margin:0 auto; padding:16px 32px;
+  max-width:var(--content-width);   /* 和 .wrap 同宽，导航和内容左右对齐 */
+  margin:0 auto; padding:16px 32px;
   display:flex; align-items:center; justify-content:space-between;
 }
 .brand{
@@ -44,7 +45,16 @@ nav{
 }
 
 /* ---------- sections ---------- */
-section{ padding:96px 0; border-bottom:1px solid var(--line); }
+section{
+  width:100%;
+  min-height:100vh;            /* 每个 section 至少占满一屏；不需要就删掉这行 */
+  display:flex;
+  flex-direction:column;       /* 里面的内容竖着排，不会挤成一行 */
+  justify-content:center;      /* 内容在这一屏里垂直居中 */
+  padding:96px 0;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:63px;      /* 点导航跳转时，标题不会被 sticky header 挡住 */
+}
 section:last-of-type{ border-bottom:none; }
 
 .section-title{
@@ -62,4 +72,8 @@ section:last-of-type{ border-bottom:none; }
 footer{
   padding:32px 0 48px; text-align:center;
   font-family:var(--mono); font-size:12px; color:var(--grey);
+}
+
+@media (max-width:720px){
+  section{ min-height:auto; padding:64px 0; }
 }
