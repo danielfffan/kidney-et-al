@@ -1,0 +1,87 @@
+/* ==========================================================
+   base.css — design tokens, reset, typography, shared components
+   ========================================================== */
+
+/* ---------- tokens ---------- */
+:root{
+  --bg: #f0efe9;
+  --paper: #fbfaf7;
+  --ink: #1b1b2f;
+  --ink-soft: #4a4a5c;
+  --grey: #8b8a94;
+  --line: #dcdad2;
+  --violet: #4b4a8f;
+  --violet-deep: #34335f;
+  --rose: #b8677a;
+  --rose-soft: #e7d3d6;
+
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image: radial-gradient(circle, rgba(75,74,143,0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+a{ color:inherit; text-decoration:none; }
+
+::selection{ background:var(--violet); color:var(--paper); }
+
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 32px;
+}
+
+/* ---------- headings ---------- */
+h1,h2,h3{ font-family:var(--serif); font-weight:600; letter-spacing:-0.01em; }
+
+/* ---------- eyebrow / specimen label ---------- */
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--violet-deep);
+  border:1px solid var(--line);
+  background:var(--paper);
+  padding:4px 10px;
+  border-radius:2px;
+  margin-bottom:22px;
+}
+.eyebrow::before{
+  content:'';
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--rose);
+  flex:none;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em;
+  padding:11px 20px; border-radius:2px; border:1px solid var(--ink);
+  display:inline-flex; align-items:center; gap:8px;
+  transition:all .2s ease;
+}
+.btn-solid{ background:var(--violet); color:var(--paper); border-color:var(--violet); }
+.btn-solid:hover{ background:var(--violet-deep); border-color:var(--violet-deep); }
+.btn-outline:hover{ background:var(--ink); color:var(--paper); }
+
+/* ---------- reveal ---------- */
+.reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.show{ opacity:1; transform:translateY(0); }

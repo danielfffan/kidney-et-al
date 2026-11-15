@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fan (Daniel) Fan — Computational Pathology</title>
+<meta name="description" content="Fan (Daniel) Fan — PhD Student in Biomedical Engineering, Georgia Tech & Emory University. Computational pathology and kidney disease research.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/sections.css">
+
+<!-- Blog-only refinements: all other sections remain unchanged -->
+<style>
+  #blog .blog-category {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #65836f;
+  }
+  #blog .blog-item h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  #blog .blog-item p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #737a75;
+  }
+  #blog .blog-thumb {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  @media (max-width: 600px) {
+    #blog .blog-thumb {
+      width: 96px;
+      height: 80px;
+    }
+    #blog .blog-item h4 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">
+      <span class="brand-mark">FF</span>
+      Fan (Daniel) Fan
+    </div>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle menu">≡</button>
+    <div class="navlinks" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+      <a href="#photography">Photography</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero wrap">
+  <div>
+    <span class="eyebrow">01 — Welcome</span>
+    <h1>Reading kidney tissue <em>at scale.</em></h1>
+    <p class="role">I build computational pathology methods to study structural change in kidney disease — where machine learning meets the microscope.</p>
+    <p class="affil">PhD Student, Biomedical Engineering </p>
+    <p class="affil">Georgia Tech &amp; Emory University</p>
+    <div class="hero-cta">
+      <a href="#research" class="btn btn-solid">View research →</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">02 — About</span>
+    <div class="about-grid">
+      <div class="reveal">
+        <img src="head.jpg" alt="Your name" class="avatar-photo">
+        <p>I'm a PhD student in the Wallace H. Coulter Department of Biomedical Engineering, a joint program between Georgia Tech and Emory University, where I work on computational pathology methods for kidney diseases.</p>
+        <p>My research focuses on quantitative and deep learning–based analysis of whole-slide histology images — segmenting and characterizing glomeruli, tubules, peritubular capillaries, and interstitial tissue to better understand how structural change relates to disease progression in kidney diseases. I also pair these image-derived features with multi-scale molecular data, such as spatial omics and bulk transcriptomics.</p>
+        <p>Outside the lab, I'm generally found behind a camera, out on a tennis court, or nursing a beer over conversations that have nothing to do with my thesis.</p>
+        <p>I recently found myself deep down a Jazz rabbit hole and started teaching myself piano — wish me luck. :)</p>
+      </div>
+      <div class="factsheet reveal">
+        <h3>Quick facts</h3>
+        <div class="fact-row"><span>Program</span><span>PhD, Biomedical Engineering</span></div>
+        <div class="fact-row"><span>Institutions</span><span>Georgia Tech &amp; Emory</span></div>
+        <div class="fact-row"><span>Focus</span><span>Computational Pathology</span></div>
+        <div class="fact-row"><span>Disease area</span><span>Kidney Disease</span></div>
+        <div class="fact-row"><span>Advisor</span><span>Andrew Janowczyk</span></div>
+        <div class="fact-row"><span>Co-Advisor</span><span>Anant Madabhushi</span></div>
+        <div class="fact-row"><span>Location</span><span>Atlanta, GA</span></div>
+        <div class="fact-row"><span>Email</span><span>fanfan.4research@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section id="research">
+  <div class="wrap">
+    <span class="eyebrow">03 — Research</span>
+    <h2 class="section-title" style="max-width:26ch;">Computational tools for renal histopathology.</h2>
+  </div>
+  <div class="research-grid wrap">
+    <div class="research-card reveal">
+      <span class="num">I.</span>
+      <h3>Computational Pathology</h3>
+      <p>Deep learning models for whole-slide image segmentation, detection, and quantification of renal tissue structures at scale.</p>
+    </div>
+    <div class="research-card reveal">
+      <span class="num">II.</span>
+      <h3>Renal Morphometry</h3>
+      <p>Structural and morphological analysis of glomeruli, tubules, and interstitium across stages of chronic kidney disease.</p>
+    </div>
+    <div class="research-card reveal">
+      <span class="num">III.</span>
+      <h3>Multimodal Modeling</h3>
+      <p>Integrating histology, clinical variables, and molecular data to model and predict disease trajectories.</p>
+    </div>
+    <div class="research-card reveal">
+      <span class="num">IV.</span>
+      <h3>Open Tools &amp; Datasets</h3>
+      <p>Building open-source annotation pipelines and benchmark datasets for the renal pathology research community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications">
+  <div class="wrap">
+    <span class="eyebrow">04 — Publications</span>
+    <h2 class="section-title tight">Selected publications</h2>
+    <p class="section-intro tight">The entries below are placeholders — replace with your actual papers, in reverse-chronological order.</p>
+
+    <div class="pub-year">2026</div>
+    <div class="pub reveal">
+      <span class="tag">Preprint</span>
+      <div>
+        <h4>[Paper title — replace with your work]</h4>
+        <p class="venue"><em>bioRxiv</em> · F. Fan, [Coauthors] · 2026</p>
+      </div>
+    </div>
+
+    <div class="pub-year">2025</div>
+    <div class="pub reveal">
+      <span class="tag">Conference</span>
+      <div>
+        <h4>[Paper title — e.g. a segmentation or foundation-model paper]</h4>
+        <p class="venue"><em>MICCAI</em> · F. Fan, [Coauthors] · 2025</p>
+      </div>
+    </div>
+    <div class="pub reveal">
+      <span class="tag">Journal</span>
+      <div>
+        <h4>[Paper title — e.g. clinical/nephropathology study]</h4>
+        <p class="venue"><em>Journal of the American Society of Nephrology (JASN)</em> · F. Fan, [Coauthors] · 2025</p>
+      </div>
+    </div>
+
+    <p class="placeholder-note">↳ Add links to PDF / DOI / code once you fill these in — happy to wire those up too.</p>
+  </div>
+</section>
+
+<!-- ================= CV ================= -->
+<section id="cv">
+  <div class="wrap">
+    <span class="eyebrow">05 — CV</span>
+    <h2 class="section-title">Education &amp; experience</h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="when">2023 — 2027 (expected)</div>
+        <h4>Ph.D. in Biomedical Engineering</h4>
+        <p>Wallace H. Coulter Department of Biomedical Engineering, Georgia Institute of Technology &amp; Emory University — Atlanta, GA, USA</p>
+        <ul class="tl-details">
+          <li><span>Advisor</span> Andrew Janowczyk, PhD, MS</li>
+          <li><span>Co-Advisor</span> Anant Madabhushi, PhD</li>
+          <li><span>Thesis</span> <em>Clinical and Biological Relevance of the Tubulointerstitium in Glomerular Diseases Through Multiscale Computational Pathology</em></li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="when">2021 — 2023</div>
+        <h4>M.S. in Electrical Engineering</h4>
+        <p>Case Western Reserve University — Cleveland, OH, USA</p>
+        <ul class="tl-details">
+          <li><span>Thesis</span> <em>CohortFinder: A Data-Driven, Open-Source Tool for Partitioning Pathology and Imaging Cohorts to Yield Robust Machine Learning Models</em> <a href="http://rave.ohiolink.edu/etdc/view?acc_num=case168071584744799" target="_blank" rel="noopener">[Link]</a></li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="when">2016 — 2020</div>
+        <h4>B.E. in Mechanical Engineering</h4>
+        <p>Shanghai University — Shanghai, China</p>
+      </div>
+    </div>
+    <div class="cv-download">
+      <a href="/kidney-et-al/pdf/cv_fan_111226.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download full CV (PDF) →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PHOTOGRAPHY ================= -->
+<section id="photography">
+  <div class="wrap">
+    <span class="eyebrow">06 — Photography</span>
+    <h2 class="section-title tight">Off the clock</h2>
+    <p class="section-intro">These tiles are color placeholders — swap the background of each <code>.photo-tile</code> for your own image.</p>
+    <div class="photo-grid">
+      <div class="photo-tile reveal"><span>Atlanta, 2025</span></div>
+      <div class="photo-tile reveal"><span>Lab life</span></div>
+      <div class="photo-tile reveal"><span>Trail run</span></div>
+      <div class="photo-tile reveal"><span>Conference travel</span></div>
+      <div class="photo-tile reveal"><span>Weekend</span></div>
+      <div class="photo-tile reveal"><span>Untitled</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG ================= -->
+<section id="blog">
+  <div class="wrap">
+    <span class="eyebrow">07 — Blog</span>
+    <h2 class="section-title">Notes &amp; writing</h2>
+    <div class="blog-list">
+
+      <a class="blog-item has-thumb reveal"
+         href="https://andrewjanowczyk.com/understanding-functional-forms-in-survival-analysis-why-linear-isnt-always-enough/"
+         target="_blank" rel="noopener">
+        <div>
+          <span class="blog-category">STATISTICS / METHODS</span>
+          <h4>Understanding Functional Forms in Survival Analysis: Why Linear Isn't Always Enough</h4>
+          <p>How does a variable actually relate to the outcome? This post explains what functional form means in survival analysis, why modeling it wrong can bias estimates and weaken predictions, and how to check it in practice.</p>
+          <span class="read">Read post →</span>
+        </div>
+        <img class="blog-thumb"
+             src="/kidney-et-al/img/blog/functional-forms-thumb.png"
+             alt="Chart comparing a U-shaped BMI–risk curve with a linear assumption"
+             loading="lazy">
+      </a>
+
+      <a class="blog-item has-thumb reveal"
+         href="https://andrewjanowczyk.com/using-omero-in-qupath-to-have-remote-access-to-your-data/"
+         target="_blank" rel="noopener">
+        <div>
+          <span class="blog-category">DIGITAL PATHOLOGY / TUTORIAL</span>
+          <h4>Using OMERO in QuPath to Have Remote Access to Your Data</h4>
+          <p>Instead of transferring large amounts of image data, this post shows how to set up a centralized OMERO server that QuPath can reach remotely, so you can review and annotate whole-slide images in real time.</p>
+          <span class="read">Read post →</span>
+        </div>
+        <img class="blog-thumb"
+             src="/kidney-et-al/img/blog/omero-qupath-thumb.png"
+             alt="OMERO web viewer showing an H&amp;E-stained kidney biopsy slide"
+             loading="lazy">
+      </a>
+
+      <a class="blog-item has-thumb reveal"
+         href="https://andrewjanowczyk.com/de-array-a-tissue-microarray-tma-using-qupath-and-python/"
+         target="_blank" rel="noopener">
+        <div>
+          <span class="blog-category">IMAGE ANALYSIS / WORKFLOW</span>
+          <h4>De-array a Tissue Microarray (TMA) Using QuPath and Python</h4>
+          <p>This post walks through how to de-array a tissue microarray with QuPath and Python, splitting it into individual cores that are ready for computational analysis.</p>
+          <span class="read">Read post →</span>
+        </div>
+        <img class="blog-thumb"
+             src="/kidney-et-al/img/blog/tma-dearray-thumb.png"
+             alt="Tissue microarray slide de-arrayed into individual cores"
+             loading="lazy">
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap contact-inner">
+    <div class="reveal">
+      <span class="eyebrow">08 — Contact</span>
+      <h2>Let's talk kidneys, pixels, or anything in between.</h2>
+      <p>Reach out about collaborations, questions on the work, or anything else — I usually reply within a few days.</p>
+      <a href="mailto:ffan4@emory.edu" class="btn btn-solid">ffan4@emory.edu →</a>
+    </div>
+    <div class="social-list reveal">
+      <a href="https://scholar.google.com/citations?user=sjzMyXkAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span>Google Scholar</span><span class="arrow">↗</span></a>
+      <a href="https://github.com/danielfffan" target="_blank" rel="noopener"><span>GitHub</span><span class="arrow">↗</span></a>
+      <a href="https://www.linkedin.com/in/fan-fan-228908215/" target="_blank" rel="noopener"><span>LinkedIn</span><span class="arrow">↗</span></a>
+      <a href="mailto:ffan4@emory.edu"><span>Email</span><span class="arrow">↗</span></a>
+      <a href="/kidney-et-al/pdf/cv_fan_111226.pdf" target="_blank" rel="noopener"><span>CV (PDF)</span><span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Fan (Daniel) Fan · Built with care in Atlanta, GA
+</footer>
+
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
