@@ -14,44 +14,6 @@
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/sections.css">
 
-<!-- Blog-only refinements: all other sections remain unchanged -->
-<style>
-  #blog .blog-category {
-    display: block;
-    margin-bottom: 10px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #65836f;
-  }
-  #blog .blog-item h4 {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
-  }
-  #blog .blog-item p {
-    font-size: 14px;
-    line-height: 1.75;
-    color: #737a75;
-  }
-  #blog .blog-thumb {
-    width: 160px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 6px;
-  }
-  @media (max-width: 600px) {
-    #blog .blog-thumb {
-      width: 96px;
-      height: 80px;
-    }
-    #blog .blog-item h4 { font-size: 17px; }
-  }
-</style>
 </head>
 <body>
 
@@ -61,7 +23,7 @@
       <span class="brand-mark">FF</span>
       Fan (Daniel) Fan
     </div>
-    <button class="navtoggle" id="navToggle" aria-label="Toggle menu">≡</button>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">≡</button>
     <div class="navlinks" id="navLinks">
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -95,7 +57,7 @@
     <span class="eyebrow">02 — About</span>
     <div class="about-grid">
       <div class="reveal">
-        <img src="head.jpg" alt="Your name" class="avatar-photo">
+        <img src="head.jpg" alt="Portrait of Fan (Daniel) Fan" class="avatar-photo">
         <p>I'm a PhD student in the Wallace H. Coulter Department of Biomedical Engineering, a joint program between Georgia Tech and Emory University, where I work on computational pathology methods for kidney diseases.</p>
         <p>My research focuses on quantitative and deep learning–based analysis of whole-slide histology images — segmenting and characterizing glomeruli, tubules, peritubular capillaries, and interstitial tissue to better understand how structural change relates to disease progression in kidney diseases. I also pair these image-derived features with multi-scale molecular data, such as spatial omics and bulk transcriptomics.</p>
         <p>Outside the lab, I'm generally found behind a camera, out on a tennis court, or nursing a beer over conversations that have nothing to do with my thesis.</p>
@@ -110,7 +72,7 @@
         <div class="fact-row"><span>Advisor</span><span>Andrew Janowczyk</span></div>
         <div class="fact-row"><span>Co-Advisor</span><span>Anant Madabhushi</span></div>
         <div class="fact-row"><span>Location</span><span>Atlanta, GA</span></div>
-        <div class="fact-row"><span>Email</span><span>fanfan.4research@gmail.com</span></div>
+        <div class="fact-row"><span>Email</span><span>ffan4@emory.edu</span></div>
       </div>
     </div>
   </div>
@@ -213,7 +175,7 @@
       </div>
     </div>
     <div class="cv-download">
-      <a href="/kidney-et-al/pdf/cv_fan_111226.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download full CV (PDF) →</a>
+      <a href="pdf/cv_fan_111226.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download full CV (PDF) →</a>
     </div>
   </div>
 </section>
@@ -252,7 +214,7 @@
           <span class="read">Read post →</span>
         </div>
         <img class="blog-thumb"
-             src="/kidney-et-al/img/blog/functional-forms-thumb.png"
+             src="img/blog/functional-forms-thumb.png"
              alt="Chart comparing a U-shaped BMI–risk curve with a linear assumption"
              loading="lazy">
       </a>
@@ -267,7 +229,7 @@
           <span class="read">Read post →</span>
         </div>
         <img class="blog-thumb"
-             src="/kidney-et-al/img/blog/omero-qupath-thumb.png"
+             src="img/blog/omero-qupath-thumb.png"
              alt="OMERO web viewer showing an H&amp;E-stained kidney biopsy slide"
              loading="lazy">
       </a>
@@ -282,7 +244,7 @@
           <span class="read">Read post →</span>
         </div>
         <img class="blog-thumb"
-             src="/kidney-et-al/img/blog/tma-dearray-thumb.png"
+             src="img/blog/tma-dearray-thumb.png"
              alt="Tissue microarray slide de-arrayed into individual cores"
              loading="lazy">
       </a>
@@ -305,7 +267,7 @@
       <a href="https://github.com/danielfffan" target="_blank" rel="noopener"><span>GitHub</span><span class="arrow">↗</span></a>
       <a href="https://www.linkedin.com/in/fan-fan-228908215/" target="_blank" rel="noopener"><span>LinkedIn</span><span class="arrow">↗</span></a>
       <a href="mailto:ffan4@emory.edu"><span>Email</span><span class="arrow">↗</span></a>
-      <a href="/kidney-et-al/pdf/cv_fan_111226.pdf" target="_blank" rel="noopener"><span>CV (PDF)</span><span class="arrow">↗</span></a>
+      <a href="pdf/cv_fan_111226.pdf" target="_blank" rel="noopener"><span>CV (PDF)</span><span class="arrow">↗</span></a>
     </div>
   </div>
 </section>

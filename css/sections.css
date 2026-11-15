@@ -27,8 +27,9 @@
   font-size:18px; color:var(--ink-soft); margin-bottom:10px; max-width:480px;
 }
 .hero .affil{
-  font-family:var(--mono); font-size:13px; color:var(--ink); margin-bottom:28px;
+  font-family:var(--mono); font-size:13px; color:var(--ink); margin-bottom:2px;
 }
+.hero .affil:last-of-type{ margin-bottom:28px; }
 .hero-cta{ display:flex; gap:14px; flex-wrap:wrap; }
 
 /* ---------- about ---------- */
@@ -188,7 +189,7 @@
 
 /* ===== Blog thumbnails ===== */
 a.blog-item { color: inherit; text-decoration: none; }
-.blog-item.has-thumb { grid-template-columns: 120px 1fr 160px; align-items: center; }
+.blog-item.has-thumb { grid-template-columns: 1fr 160px; align-items: center; }
 .blog-thumb {
   width: 200px; aspect-ratio: 16 / 10; object-fit: cover;
   border-radius: 8px; border: 1px solid rgba(0,0,0,.08);
@@ -237,4 +238,5 @@ a.blog-item:hover h4 { text-decoration: underline; }
   .blog-item.has-thumb { grid-template-columns: 1fr; }
   .blog-thumb,
   #blog .blog-thumb { width: 100%; height: auto; order: -1; }
+  #blog .blog-item h4 { font-size: 17px; }
 }

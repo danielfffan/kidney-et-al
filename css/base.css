@@ -43,7 +43,7 @@ a{ color:inherit; text-decoration:none; }
 /* ---------- layout ---------- */
 /* section 本身铺满整个屏幕宽度 */
 section{
-  width:100%
+  width:100%;
   display:flex;
   align-items:center;        /* 内容在这一屏里垂直居中 */
   padding:96px 0;
