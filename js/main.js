@@ -23,3 +23,18 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 revealEls.forEach(el => io.observe(el));
+
+// photography: hover zoom-out to reveal the full, uncropped frame.
+// Each img uses object-fit:contain; --cover-scale enlarges it to fill the tile.
+document.querySelectorAll('.photo-tile img').forEach(img => {
+  const tile = img.closest('.photo-tile');
+  tile.style.setProperty('--photo', `url("${img.getAttribute('src')}")`);
+  const setScale = () => {
+    if (!img.naturalWidth || !tile.clientHeight) return;
+    const imgAR = img.naturalWidth / img.naturalHeight;
+    const tileAR = tile.clientWidth / tile.clientHeight;
+    tile.style.setProperty('--cover-scale', Math.max(imgAR / tileAR, tileAR / imgAR).toFixed(4));
+  };
+  if (img.complete) setScale(); else img.addEventListener('load', setScale);
+  window.addEventListener('resize', setScale);
+});
